@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/js/index.js" defer type="module"></script>
+    <link rel="stylesheet" href="assets/icons/style.css" />
+    <link
+      rel="alternate icon"
+      class="js-site-favicon"
+      type="image/png"
+      href="https://github.githubassets.com/favicons/favicon-dark.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <script src="https://kit.fontawesome.com/bce1e3d2a4.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="loader">
+      <img src="assets/img/github_logo.png" alt="loader" id="loader-img" />
+    </div>
+    <div class="site" id="page">
+      <header class="header-site" id="header-site">
+        <img id="logo" alt="logo" />
+        <h2 id="header-title"></h2>
+      </header>
+      <aside class="header-side">
+        <div class="menu-side-wrap">
+          <nav class="menus-side-nav nav">
+            <ul class="menu-side-items menu" id="menu-side"></ul>
+          </nav>
+        </div>
+      </aside>
+      <button class="hamburguer-menu-button button-rounded">
+        <div class="hamburguer-wrap">
+          <div class="hamburger"></div>
+        </div>
+        <!-- <i class="icon-menu"></i> -->
+      </button>
+      <div class="content" id="content">
+        <div class="container">
+          <div class="content-area">
+            <main id="main" class="main-site">
+              <article class="page">
+                <section class="section" id="section"></section>
+              </article>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="follower"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+      integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

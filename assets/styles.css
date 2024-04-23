@@ -1,0 +1,330 @@
+/**---------------*
+ * General Styles
+ *---------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-family: "poppins";
+  --font-size: 16px;
+  --color-main: rgb(255, 200, 0);
+  --color-second: black;
+  --width-container: 1280px;
+  --model-main-color: rgb(255, 200, 0, 0.85);
+  --model-second-color: rgb(0, 0, 0, 0.85);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: -2.5px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-rounded {
+  background-color: var(--color-main);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 0 8px 1px rgba(168, 168, 168, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-rounded:hover {
+  animation: blink_button 1s linear infinite;
+}
+
+@keyframes blink_button {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/**---------------*
+ * Header Styles
+ *---------------*/
+.header-site {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-main);
+  color: var(--color-second);
+  display: grid;
+  padding: 15px 25px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+#header-title {
+  justify-self: center;
+  margin: 0;
+}
+
+.header-title {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.section {
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--width-container);
+  min-height: 100vh;
+}
+
+.hamburguer-menu-button {
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburguer-wrap {
+  width: 30px;
+  display: flex;
+  justify-content: start;
+}
+
+.hamburger {
+  width: 30px;
+  height: 2.5px;
+  background-color: black;
+  position: relative;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  left: 0;
+  width: 30px;
+}
+
+.hamburger::before {
+  transform: translateY(-7px);
+}
+
+.hamburger::after {
+  transform: translateY(7px);
+}
+
+.hamburguer-menu-button.is_active .hamburger {
+  width: 0px;
+}
+
+.hamburguer-menu-button.is_active .hamburguer-wrap {
+  width: 25px;
+}
+
+.hamburguer-menu-button.is_active .hamburger::before {
+  transform: rotate(45deg);
+  width: 25px;
+}
+
+.hamburguer-menu-button.is_active .hamburger::after {
+  transform: rotate(-45deg);
+  width: 25px;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.header-side {
+  position: fixed;
+  background-color: var(--model-second-color);
+  width: 100%;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.header-side.is_active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-side-wrap {
+  background-color: #fff;
+  max-width: 390px;
+  height: 100%;
+  transform: translate(-100%, 0);
+  transition: transform 0.3s ease;
+}
+
+.menu-side-items {
+  margin: 0;
+  padding: 70px 0 0;
+}
+
+.header-side.is_active .menu-side-wrap {
+  transform: translate(0, 0);
+}
+
+.menu-item {
+  list-style: none;
+  padding: 15px 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: var(--color-second);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.menu-item a:hover {
+  color: var(--color-main);
+}
+/**--------------*
+ * Content Styles
+ *---------------*/
+#logo {
+  max-width: 150px;
+  object-fit: contain;
+  width: 100%;
+}
+
+code {
+  border-radius: 0.5rem;
+  line-height: 1.5em;
+}
+
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
+  color: #8b949e6b !important;
+}
+
+#section h2 {
+  font-size: 22px;
+}
+
+code {
+  background-color: hsl(0deg 0% 13% / 27%);
+  padding: 0.1em 0.5em;
+  line-height: 1.5em;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0px 0px 20px;
+  border-left: 5px solid rgb(13 17 23);
+  background: rgb(238, 238, 238);
+}
+
+#header-title,
+#logo {
+  cursor: pointer;
+}
+
+/**--------------*
+ * Loader Styles
+ *---------------*/
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+
+@keyframes heartbeat {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loader-img {
+  max-width: 250px;
+  animation: heartbeat 1.5s linear infinite;
+}
+
+#follower {
+  position: fixed;
+  pointer-events: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  text-indent: 0;
+  background: var(--color-main);
+  will-change: left, top, width, height;
+  transition: left 0.15s ease-out, top 0.15s ease-out;
+  z-index: 999;
+}

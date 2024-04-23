@@ -1,0 +1,48 @@
+{
+  "header" : {
+    "title" : "Curso de GIT & GITHUB",
+    "description": "Aprende a usar GIT y GITHUB desde cero",
+    "logo_url": "assets/img/github_logo.png",
+    "menu": [
+      {
+        "text": "Introduction",
+        "src": "docs/Introduction"
+      },
+      {
+        "text": "Flujo de GIT & GitHub",
+        "src": "docs/FlujoGit&GitHub"
+      },
+      {
+        "text": "Ramas",
+        "src": "docs/Ramas"
+      },
+      {
+        "text": "Registro de Historial",
+        "src": "docs/RegistroHistorial"
+      },
+      {
+        "text": "Reseteos",
+        "src": "docs/Reseteos"
+      },
+      {
+        "text": "Remotos",
+        "src": "docs/Remotos"
+      },
+      {
+        "text": "Tags",
+        "src": "docs/Tags"
+      },
+      {
+        "text": "GitHub Pages",
+        "src": "docs/GitHubPages"
+      },
+      {
+        "text": "Colaboracion GitHub",
+        "src": "docs/ColaboracionGitHub"
+      }
+    ]
+  },
+  "content": {
+    "default": "docs/Introduction"
+  }
+}
